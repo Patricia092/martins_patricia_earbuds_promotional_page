@@ -1,47 +1,46 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Beats & Barbie</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/main.css" rel="stylesheet"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  </head>
-  <body>
-    <!-- <model-viewer> HTML element -->
-    <model-viewer   id="model" src="model/earbuds_mv.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="images/poster.webp" shadow-intensity="0.45" exposure="1" auto-rotate>
 
-      <button class="Hotspot" slot="hotspot-3" data-position="150.7250371719018m 970.8817209745371m 210.72958564680786m" data-normal="0.11944922088254654m 0.992159615212079m 0.036758421793817574m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation" id="hotspot-1">
+<head>
+  <title>Beats & Barbie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
 
-          </div>
+<body>
+  <!-- <model-viewer> HTML element -->
+    <model-viewer id="model" src="model/earbuds_mv.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="images/poster.webp" shadow-intensity="0.51" shadow-softness="0.91">
+      <button class="Hotspot" slot="hotspot-1" data-position="146.05276734473514m 935.7646851164202m 232.50406316710365m" data-normal="-0.000005143399658587198m 0.0000011232166279996818m 0.999999999986142m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation" id="hotspot-1"></div>
       </button>
 
-      <button class="Hotspot" slot="hotspot-4" data-position="148.19233751412168m 923.4392272884559m 232.50406345799664m" data-normal="-0.0000058498583001276305m -0.000003906476492387077m -0.9999999999752593m" data-visibility-attribute="visible">
+      <button class="Hotspot" slot="hotspot-2" data-position="145.45560289284117m 810.0133033870386m 160.79687329506987m" data-normal="-0.04083973881683651m -0.05216567039752071m 0.9978030159131359m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation" id="hotspot-2"></div>
       </button>
 
-      <button class="Hotspot" slot="hotspot-5" data-position="152.61816827018833m 797.9426625103509m 109.54078250305099m" data-normal="0.1952524288111228m -0.7882299878083655m -0.5835837346628003m" data-visibility-attribute="visible">
+      <button class="Hotspot" slot="hotspot-3" data-position="116.42041139824296m 897.1507485910242m 103.65102637239514m" data-normal="-0.09001972139484776m -1.0444706005933344e-33m -0.9959399830110217m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation" id="hotspot-3"></div>
       </button>
 
-      <button class="Hotspot" slot="hotspot-6" data-position="183.86250334189177m 891.2316540601497m 104.40692433232428m" data-normal="0.10399841574804619m 3.2221710116738274e-34m -0.994577462806139m" data-visibility-attribute="visible">
+      <button class="Hotspot" slot="hotspot-4" data-position="172.79538166284263m 907.7036259666295m 201.69776337611808m" data-normal="0.9802871677058766m -0.19697403213754786m -0.015436952246703026m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation" id="hotspot-4"></div>
       </button>
 
-      <button class="Hotspot" slot="hotspot-7" data-position="115.97680058425554m 893.2920525499541m 103.6911228868077m" data-normal="-0.09001972139484776m -1.044470600593334e-33m -0.9959399830110217m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation" id="hotspot-5"></div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
       </button>
-
-      <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
-      </div>
       <div id="ar-prompt">
           <img src="images/ar_hand_prompt.png">
       </div>
     </model-viewer>  
-    <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+  <!-- Loads <model-viewer> for browsers: -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
