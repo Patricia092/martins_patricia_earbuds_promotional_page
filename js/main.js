@@ -7,7 +7,6 @@
   //Functions
 
   function mLoaded() {
-    //console.log(hotspots);
     hotSpots.forEach(hotspot => {
       hotspot.style.display = "block";
     });
@@ -15,30 +14,26 @@
 
   const infoBoxes = [
     {
-      title: "3x Larger Mics for Crisp, Clear Calls",
-      text: "...",
-      img: "images/teste.png"
+      title: "Readily Accessible",
+      text: "The 'b' button enables straightforward, customizable on-ear controls for managing music, switching listening modes, handling calls, and activating the voice assistant.",
+      img: "images/button.jpg"
     },
     {
-      title: "...",
-      text: "...",
-      img: "images/teste.png"
+      title: "All-Day Comfort",
+      text: "The Barbie earbuds create a comfortable acoustic seal with four ear tip options (XS, S, M & L) to accommodate a wider range of ears.",
+      img: "images/comfort.jpg"
     },
     {
-      title: "...",
-      text: "...",
-      img: "images/teste.png"
+      title: "42 Hours with Charging Case",
+      text: "Experience uninterrupted audio enjoyment with the convenience of up to 42 hours of listening time when utilizing the included charging case.",
+      img: "images/battery.jpg"
     },
     {
-      title: "...",
-      text: "...",
-      img: "images/teste.png"
+      title: "3x Larger Microphones",
+      text: "3x larger microphones and a voice-targeting algorithm effectively filter out background noise, resulting in crisp and clear call performance.",
+      img: "images/microphones.jpg"
     },
-    {
-      title: "...",
-      text: "...",
-      img: "images/teste.png"
-    }
+    
   ];
 
   function loadInfo() {
@@ -50,13 +45,7 @@
       text.textContent = infoBox.text;
       let img = document.createElement('img');
       img.src = infoBox.img;
-      img.alt = infoBox.title;
-      console.log('img')
-      // so falta fazer para a imagem, com a srct tag
-      console.log(selected);
-      console.log(infoBox.title);
-      console.log(infoBox.text);
-
+      
       selected.appendChild(title);
       selected.appendChild(text);
       selected.appendChild(img);
