@@ -27,7 +27,7 @@ model-viewer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   color: rgba(0, 0, 0, 0.8);
   display: block;
-  font-family: "Poppins", sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 18px;
   font-weight: 700;
   left: calc(100% + 1em);
@@ -70,7 +70,7 @@ model-viewer {
   white-space: nowrap;
   bottom: 16px;
   padding: 0px 16px 0px 40px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 14px;
   color: #4e4e4e;
   height: 36px;
@@ -126,4 +126,306 @@ model-viewer[ar-status=session-started] > #ar-prompt {
 
 model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
+}
+
+header {
+  background-color: white;
+  font-size: 1em;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+.items {
+  text-decoration: none;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ul-navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  margin: 30px 0px 20px 0px;
+}
+
+.ul-navigation-tablet {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  margin: 30px 0px 20px 0px;
+  padding: 0;
+}
+
+.ul-navigation-tablet a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+}
+
+a i {
+  transition: all 0.3s linear;
+}
+
+a:hover i {
+  transform: scale(1);
+  color: #000000;
+}
+
+.ul-navigation a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.animation li {
+  display: inline-block;
+  position: relative;
+  margin-right: 40px;
+  color: #000000;
+}
+
+.animation li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.animation li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.animation-tablet li {
+  display: inline-block;
+  position: relative;
+  border: 1px solid #000000;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: transparent;
+}
+
+.animation-tablet li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 25px;
+  transform-origin: bottom right;
+  z-index: -1;
+}
+
+.animation-tablet li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.box-hero {
+  height: 650px;
+}
+
+.features-title h3 {
+  text-align: center;
+}
+
+.product {
+  margin-top: 22px;
+  padding: 10px;
+}
+
+.product h3 {
+  font-family: "Karla", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.product p {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .features-title h3 {
+    font-size: 30px;
+    margin: 40px 0 20px 0;
+  }
+  .product h3 {
+    font-size: 22px;
+    padding: 0 50px 0 50px;
+  }
+  .product p {
+    font-size: 54px;
+    margin: 20px 0 60px 0;
+  }
+  .product-title-con {
+    height: 80px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .features-title h3 {
+    font-size: 34px;
+    margin-top: 40px;
+  }
+  .product h3 {
+    font-size: 22px;
+  }
+  .product p {
+    font-size: 54px;
+    margin-bottom: 60px;
+  }
+  .product-title-con {
+    height: 110px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features-title h3 {
+    font-size: 42px;
+    margin-top: 40px;
+  }
+  .product h3 {
+    font-size: 24px;
+    padding: 15px;
+  }
+  .product p {
+    font-size: 60px;
+    margin-bottom: 60px;
+  }
+  .product-title-con {
+    height: 120px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .features-title h3 {
+    font-size: 42px;
+  }
+  .product h3 {
+    font-size: 28px;
+  }
+  .product p {
+    font-size: 60px;
+    margin-bottom: 60px;
+  }
+  .product-title-con {
+    height: 140px;
+  }
+}
+body {
+  font-family: "Karla", sans-serif;
+}
+
+.box-starting {
+  background-color: rgb(221, 221, 221);
+  color: rgb(27, 27, 27);
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.box-starting h3 {
+  font-size: 32px;
+}
+
+.earbuds-title h3 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .earbuds-title {
+    text-align: left;
+    padding-left: 20px;
+  }
+  .earbuds-title h3 {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  .earbuds-title h4 {
+    font-size: 40px;
+    margin: 10px 0 15px 0;
+  }
+  .earbuds-text {
+    font-size: 16px;
+    padding: 0 20px 0 20px;
+    line-height: 1.4;
+  }
+}
+@media screen and (min-width: 769px) {
+  .earbuds-title {
+    text-align: left;
+    padding-left: 20px;
+  }
+  .earbuds-title h3 {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+  .earbuds-title h4 {
+    font-size: 46px;
+    margin: 10px 0 15px 0;
+  }
+  .earbuds-text {
+    font-size: 20px;
+    padding: 0 20px 0 20px;
+    line-height: 1.6;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .earbuds-title {
+    text-align: left;
+    padding-left: 30px;
+  }
+  .earbuds-title h3 {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  .earbuds-title h4 {
+    font-size: 60px;
+    margin: 10px 0 20px 0;
+  }
+  .earbuds-text {
+    font-size: 20px;
+    padding: 10px 30px 0 30px;
+    line-height: 1.8;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .earbuds-title {
+    text-align: left;
+    padding-left: 30px;
+  }
+  .earbuds-title h3 {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  .earbuds-title h4 {
+    font-size: 60px;
+    margin: 10px 0 20px 0;
+  }
+  .earbuds-text {
+    font-size: 21px;
+    padding: 10px 30px 20px 30px;
+    line-height: 1.7;
+  }
 }/*# sourceMappingURL=main.css.map */

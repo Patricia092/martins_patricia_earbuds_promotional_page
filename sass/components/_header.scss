@@ -1,0 +1,120 @@
+@use '../abstracts' as a;
+
+header {
+    background-color: white;
+    font-size: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: a.$navbar-font-family;
+    text-transform: uppercase
+}
+
+.items {
+    text-decoration: none;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+.ul-navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin: 30px 0px 20px 0px;
+
+}
+
+.ul-navigation-tablet {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin: 30px 0px 20px 0px;
+    padding: 0;
+
+}
+
+.ul-navigation-tablet a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+a i {
+    transition: all 0.3s linear;
+}
+
+a:hover i {
+    transform: scale(1);
+    color: #000000;
+}
+
+.ul-navigation a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.animation li {
+    display: inline-block;
+    position: relative;
+    margin-right: 40px;
+    color: #000000;
+}
+
+.animation li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.animation li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.animation-tablet li {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: transparent;
+}
+
+.animation-tablet li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 25px;
+    transform-origin: bottom right;
+    z-index: -1;
+}
+
+.animation-tablet li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background-color: #ffffff;
+    color: #000000;
+}
