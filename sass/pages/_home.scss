@@ -1,1 +1,127 @@
-// home
+@use '../abstracts' as a;
+
+body {
+    font-family: a.$body-font-family;
+}
+
+// general
+.box-starting {
+    background-color: rgb(221, 221, 221);
+    color: rgb(27, 27, 27);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    h3 {
+        font-size: 32px;
+    }
+}
+
+.earbuds-title h3{
+    font-family: a.$navbar-font-family;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+
+    .earbuds-title {
+        text-align: left;
+        padding-left: 20px;
+    }
+    
+    .earbuds-title h3 {
+        font-size: 16px;
+        margin-top: 30px;
+        
+    }
+
+    .earbuds-title h4 {
+        font-size: 40px;
+        margin: 10px 0 15px 0;
+    }
+
+    .earbuds-text{
+        font-size: 16px;
+        padding:0 20px 0 20px;
+        line-height: 1.4;
+    }
+}
+
+@media screen and (min-width: 769px){
+    
+    .earbuds-title {
+        text-align: left;
+        padding-left: 20px;
+    }
+    
+    .earbuds-title h3 {
+        font-size: 18px;
+        margin-top: 30px;
+        
+    }
+
+    .earbuds-title h4 {
+        font-size: 46px;
+        margin: 10px 0 15px 0;
+    }
+
+    .earbuds-text{
+        font-size: 20px;
+        padding:0 20px 0 20px;
+        line-height: 1.6;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .earbuds-title {
+        text-align: left;
+        padding-left: 30px;
+    }
+    
+    .earbuds-title h3 {
+        font-size: 20px;
+        margin-top: 50px;
+        
+    }
+
+    .earbuds-title h4 {
+        font-size: 60px;
+        margin: 10px 0 20px 0;
+    }
+
+    .earbuds-text{
+        font-size: 20px;
+        padding: 10px 30px 0 30px;
+        line-height: 1.8;
+    }
+
+}
+
+@media screen and (min-width: 1920px) {
+
+    .earbuds-title {
+        text-align: left;
+        padding-left: 30px;
+    }
+    
+    .earbuds-title h3 {
+        font-size: 20px;
+        margin-top: 50px;
+        
+    }
+
+    .earbuds-title h4 {
+        font-size: 60px;
+        margin: 10px 0 20px 0;
+    }
+
+    .earbuds-text{
+        font-size: 21px;
+        padding: 10px 30px 20px 30px;
+        line-height: 1.7;
+    }
+}
+
