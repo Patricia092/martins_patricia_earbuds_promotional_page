@@ -43,14 +43,14 @@ model-viewer {
 }
 
 .HotspotAnnotation p {
-  color: a.$secondary-color;
+  color: a.$body-color;
   line-height: 22px;
   font-size: 14px;
   text-align: left;
 }
 
 .HotspotAnnotation h2 {
-  color: a.$primary-color;
+  color: a.$secondary-color;
   font-size: 18px;
   margin-bottom: 6px;
   text-align: center;
@@ -84,7 +84,7 @@ model-viewer {
 
 model-viewer::part(default-progress-bar) {
   height: 30px;
-  background-color: a.$primary-color;
+  background-color: #C69296;
 }
 
 #ar-button:active {

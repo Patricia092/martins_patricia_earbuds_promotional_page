@@ -2,13 +2,14 @@
 
 .features-title h3 {
     text-align: center;
+    color: a.$primary-color;
 }
 
 .product {
     margin-top: 22px;
     padding: 10px;
 }
-.product h3 {
+.product h4 {
     font-family: a.$body-font-family;
     font-weight: 300;
     text-align: center;
@@ -16,8 +17,8 @@
 
 .product p {
     text-align: center;
+    color: a.$secondary-color;
 }
-
 
 @media screen and (max-width: 768px) {
     .features-title h3 {
@@ -25,7 +26,7 @@
         margin: 40px 0 20px 0;
     }
 
-    .product h3 {
+    .product h4 {
         font-size: 22px;
         padding: 0 50px 0 50px;
     }
@@ -42,11 +43,12 @@
 @media screen and (min-width: 769px){
     .features-title h3 {
         font-size: 34px; 
-        margin-top: 40px;
+        margin-top: 70px;
     }
 
-    .product h3 {
+    .product h4 {
         font-size: 22px; 
+        margin-top: 15px;
     }
 
     .product p {
@@ -64,17 +66,17 @@
     
     .features-title h3 {
         font-size: 42px;
-        margin-top: 40px;
+        margin-top: 90px;
     }
 
-    .product h3 {
+    .product h4 {
         font-size: 24px;
         padding: 15px;
     }
 
     .product p {
         font-size: 60px;
-        margin-bottom: 60px;
+        margin-bottom: 100px;
     }
 
     .product-title-con {
@@ -85,9 +87,10 @@
 @media screen and (min-width: 1920px) {
     .features-title h3 {
         font-size: 42px;
+        margin-top: 90px;
     }
 
-    .product h3 {
+    .product h4 {
         font-size: 28px;
     }
 

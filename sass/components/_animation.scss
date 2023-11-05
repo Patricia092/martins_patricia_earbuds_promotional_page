@@ -1,0 +1,45 @@
+@use '../abstracts' as a;
+
+.img-animation {
+    display: flex;
+    justify-content: center;
+}
+
+.animation-title {
+    font-family: a.$body-font-family;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    .animation-title  {
+        font-size: 38px;
+        margin: 10px 0 15px 0;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+
+    .animation-title {
+        font-size: 46px;
+        margin: 10px 0 15px 0;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .animation-title {
+        font-size: 60px;
+        margin: 10px 0 20px 0;
+    }
+
+}
+
+@media screen and (min-width: 1920px) {
+    .animation-title {
+        font-size: 60px;
+        margin: 10px 0 20px 0;
+    }
+
+}

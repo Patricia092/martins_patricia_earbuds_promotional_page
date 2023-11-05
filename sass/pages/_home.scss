@@ -1,7 +1,10 @@
 @use '../abstracts' as a;
 
 body {
+    margin: 0px;
+    padding: 0px;
     font-family: a.$body-font-family;
+    color: a.$body-color;
 }
 
 // general
@@ -24,7 +27,24 @@ body {
     text-transform: uppercase;
 }
 
+.img-cont {
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+.img-cont img {
+    max-width: 100%;
+    height: auto; 
+    display: block;
+}
+
 @media screen and (max-width: 768px) {
+
+    .logo {
+        margin-top: 20px;
+    }
 
     .earbuds-title {
         text-align: left;
@@ -50,6 +70,10 @@ body {
 }
 
 @media screen and (min-width: 769px){
+
+    .logo {
+        margin-top: 10px;
+    }
     
     .earbuds-title {
         text-align: left;
@@ -72,9 +96,14 @@ body {
         padding:0 20px 0 20px;
         line-height: 1.6;
     }
+
 }
 
 @media screen and (min-width: 1200px) {
+
+    .logo {
+        margin-top: 10px;
+    }
 
     .earbuds-title {
         text-align: left;
@@ -101,6 +130,10 @@ body {
 }
 
 @media screen and (min-width: 1920px) {
+
+    .logo {
+        margin-top: 12px;
+    }
 
     .earbuds-title {
         text-align: left;

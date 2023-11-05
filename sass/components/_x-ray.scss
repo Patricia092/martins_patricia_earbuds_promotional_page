@@ -1,0 +1,45 @@
+@use '../abstracts' as a;
+
+.img-x-ray {
+    display: flex;
+    justify-content: center;
+}
+
+.x-ray-title {
+    font-family: a.$body-font-family;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    .x-ray-title  {
+        font-size: 38px;
+        margin: 50px 0 15px 0;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+
+    .x-ray-title {
+        font-size: 46px;
+        margin: 60px 0 15px 0;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .x-ray-title {
+        font-size: 60px;
+        margin: 100px 0 20px 0;
+    }
+
+}
+
+@media screen and (min-width: 1920px) {
+    .x-ray-title {
+        font-size: 60px;
+        margin: 10px 0 20px 0;
+    }
+
+}
