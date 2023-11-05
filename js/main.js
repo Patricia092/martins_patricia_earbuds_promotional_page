@@ -71,5 +71,6 @@
     hotspot.addEventListener("mouseover", showInfo);
     hotspot.addEventListener("mouseout", hideInfo);
   });
+  
 })();
 
