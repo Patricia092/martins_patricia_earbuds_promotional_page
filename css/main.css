@@ -129,7 +129,7 @@ model-viewer > #ar-prompt > img {
 }
 
 header {
-  background-color: white;
+  background-color: #E9E9E7;
   font-size: 1em;
   position: sticky;
   top: 0;
@@ -384,6 +384,10 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   height: 650px;
 }
 
+.features-con {
+  background-color: #E9E9E7;
+}
+
 .features-title h3 {
   text-align: center;
   color: #C69296;
@@ -506,6 +510,14 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
     margin: 10px 0 20px 0;
   }
 }
+#earbuds-view {
+  max-width: 100%;
+}
+
+#x-ray-cont {
+  display: none;
+}
+
 .img-x-ray {
   display: flex;
   justify-content: center;
@@ -532,6 +544,40 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   .x-ray-title {
     font-size: 60px;
     margin: 100px 0 20px 0;
+  }
+  #mobile-tablet-view {
+    display: none;
+  }
+  #x-ray-cont {
+    display: block;
+    max-width: 1200px;
+    margin: auto;
+  }
+  #imageCon {
+    position: relative;
+    max-width: 1200px;
+    height: 100vh;
+  }
+  .slideImage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100vh;
+  }
+  .image-right {
+    background: url(/images/x-ray.jpg) no-repeat;
+    background-size: cover;
+  }
+  .image-left {
+    background: url(/images/x-ray-main.jpg) no-repeat;
+    background-size: cover;
+    width: 50%;
+  }
+  .image-drag {
+    background-color: #C69296;
+    left: 50%;
+    width: 8px;
+    cursor: pointer;
   }
 }
 @media screen and (min-width: 1920px) {

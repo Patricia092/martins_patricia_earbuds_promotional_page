@@ -11,7 +11,8 @@
   <script src="https://kit.fontawesome.com/0eab0f8aa6.js" crossorigin="anonymous"></script>
   <link href="css/main.css" rel="stylesheet" />
   <link href="css/grid.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,8 @@
     <div class="grid-con">
       <h2 class="hidden">Header</h2>
 
-      <div class="col-start-1 col-end-3 m-col-start-1 m-col-end-3 l-col-start-1 l-col-end-3 xl-col-start-1 xl-col-end-3 logo">
+      <div
+        class="col-start-1 col-end-3 m-col-start-1 m-col-end-3 l-col-start-1 l-col-end-3 xl-col-start-1 xl-col-end-3 logo">
         <a href="#">
           <img src="images/logo.svg" alt="Beats Logo" width="100" height="50">
         </a>
@@ -47,22 +49,41 @@
             <li><a href="#">Support</a></li>
           </ul>
         </div>
-      </div> 
+      </div>
     </div>
   </header>
   <main>
-    <section class="grid-con">
+    <section class="full-width-grid-con">
       <h2 class="hidden">Animation Section</h2>
-      <article class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">
-        <h3 class="animation-title">Animation Goes Here</h3>
-      </article>
-      <article class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">
-        <h3 class="hidden">Scroll Animation Section</h3>
-        <div class="img-cont img-animation"><img src="images/x-ray-main.jpg" alt="Beats & Barbie Animation"></div>
-      </article>
+      <div class="col-span-full">
+        <canvas id="earbuds-view"></canvas>
+      </div>
+
     </section>
 
     <section class="grid-con">
+      <h2 class="hidden">Sound Quality Section</h2>
+      <article class="col-span-4 m-col-span-12 l-col-start-1 l-col-end-7 xl-col-start-1 xl-col-end-7">
+        <h3 class="hidden">Sound Quality Title</h3>
+        <div class="earbuds-title">
+          <h3>Sound Quality</h3>
+          <h4>Powerful, Balanced Sound</h4>
+        </div>
+
+        <p class="earbuds-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore
+          magna aliqua. Donec enim diam vulputate ut pharetra sit amet aliquam id. Tellus mauris a diam maecenas sed
+          enim ut sem viverra. Pharetra et ultrices neque ornare. Vitae aliquet nec ullamcorper sit amet risus nullam
+          eget felis. Sit amet cursus sit amet dictum sit amet justo donec. Libero id faucibus nisl tincidunt eget.
+          Euismod quis viverra nibh cras.</p>
+      </article>
+      <article class="col-span-4 m-col-span-12 l-col-start-7 l-col-end-13 xl-col-start-7 xl-col-end-13">
+        <h3 class="hidden">Image More Sound</h3>
+        <div class="img-cont"><img src="images/sound.jpg" alt="More Sound"></div>
+      </article>
+    </section>
+
+    <section class="grid-con features-con">
       <h2 class="hidden">Features section</h2>
       <article class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 features-title">
         <h3>Beats & Barbie Studio Buds +</h3>
@@ -103,35 +124,12 @@
     </section>
 
     <section class="grid-con">
-      <h2 class="hidden">Sound Quality Section</h2>
-      <article
-        class="col-span-4 m-col-span-12 l-col-start-1 l-col-end-7 xl-col-start-1 xl-col-end-7">
-        <h3 class="hidden">Sound Quality Title</h3>
-        <div class="earbuds-title">
-          <h3>Sound Quality</h3>
-          <h4>Powerful, Balanced Sound</h4>
-        </div>
-        
-        <p class="earbuds-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Donec enim diam vulputate ut pharetra sit amet aliquam id. Tellus mauris a diam maecenas sed
-          enim ut sem viverra. Pharetra et ultrices neque ornare. Vitae aliquet nec ullamcorper sit amet risus nullam
-          eget felis. Sit amet cursus sit amet dictum sit amet justo donec. Libero id faucibus nisl tincidunt eget.
-          Euismod quis viverra nibh cras.</p>
-      </article>
-      <article class="col-span-4 m-col-span-12 l-col-start-7 l-col-end-13 xl-col-start-7 xl-col-end-13">
-        <h3 class="hidden">Image More Sound</h3>
-        <div class="img-cont"><img src="images/sound.jpg" alt="More Sound"></div>
-      </article>
-    </section>
-
-    <section class="grid-con">
       <h2 class="hidden">AR Section</h2>
       <article class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">
         <h3 class="x-ray-title">AR Title Goes Here</h3>
       </article>
     </section>
 
-    <!-- I need to fix this Validation error after Professor Marco grades it. Error: Element div not allowed as child of element button in this context. -->
     <section class="full-width-grid-con" id="model-con">
       <h2 class="hidden">AR Model Section</h2>
       <article class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 ">
@@ -180,56 +178,61 @@
     <section class="grid-con">
       <h2 class="hidden">All-Day
         Comfort Section</h2>
-      <article
-        class="col-span-4 m-col-span-12 l-col-start-1 l-col-end-7 xl-col-start-1 xl-col-end-7 ">
+      <article class="col-span-4 m-col-span-12 l-col-start-1 l-col-end-7 xl-col-start-1 xl-col-end-7 ">
         <h3 class="hidden">All Day Comfort Image</h3>
         <div class="img-cont"><img src="images/comfort-earbuds.jpg" alt="Ear tip options"></div>
       </article>
-      <article
-      class="col-span-4 m-col-span-12 l-col-start-7 l-col-end-13 xl-col-start-7 xl-col-end-13">
-      <h3 class="hidden">All-Day
-        Comfort Text Section</h3>
+      <article class="col-span-4 m-col-span-12 l-col-start-7 l-col-end-13 xl-col-start-7 xl-col-end-13">
+        <h3 class="hidden">All-Day
+          Comfort Text Section</h3>
         <div class="earbuds-title">
           <h3>Fit</h3>
           <h4>All-Day
             Comfort</h4>
         </div>
-      <p class="earbuds-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Donec enim diam vulputate ut pharetra sit amet aliquam id. Tellus mauris a diam maecenas sed
-        enim ut sem viverra. Pharetra et ultrices neque ornare. Vitae aliquet nec ullamcorper sit amet risus nullam
-        eget felis. Sit amet cursus sit amet dictum sit amet justo donec. Libero id faucibus nisl tincidunt eget.
-        Euismod quis viverra nibh cras.</p>
-    </article>
-    </section>
-   
-    <section class="grid-con">
-      <h2 class="hidden">X-ray Section</h2>
-      <article class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">
-        <h3 class="x-ray-title">The X-ray Goes Here</h3>
+        <p class="earbuds-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore
+          magna aliqua. Donec enim diam vulputate ut pharetra sit amet aliquam id. Tellus mauris a diam maecenas sed
+          enim ut sem viverra. Pharetra et ultrices neque ornare. Vitae aliquet nec ullamcorper sit amet risus nullam
+          eget felis. Sit amet cursus sit amet dictum sit amet justo donec. Libero id faucibus nisl tincidunt eget.
+          Euismod quis viverra nibh cras.</p>
       </article>
-      <article class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">
-        <h3 class="hidden">X-ray Section</h3>
-        <div class="img-cont img-x-ray"><img src="images/x-ray.jpg" alt="Earbuds X-ray"></div>
+    </section>
+
+    <section class="grid-con">
+      <article class="col-span-full">
+        <h2 class="hidden">X-Ray revealer</h2>
+        <div id="mobile-tablet-view">
+          <img src="images/x-ray.jpg" alt="x-ray earbuds">
+          <img src="images/x-ray-main.jpg" alt="Regular view of earbuds">
+
+        </div>
+        <div id="x-ray-cont">
+          <div id="imageCon">
+            <div class="slideImage image-right"></div>
+            <div class="slideImage image-left"></div>
+            <div class="slideImage image-drag"></div>
+          </div>
+        </div>
       </article>
     </section>
 
     <section class="grid-con">
       <h2 class="hidden">Battery Section</h2>
-      <article
-        class="col-span-4 m-col-span-12 l-col-start-1 l-col-end-6 xl-col-start-1 xl-col-end-6 ">
+      <article class="col-span-4 m-col-span-12 l-col-start-1 l-col-end-6 xl-col-start-1 xl-col-end-6 ">
         <h2 class="hidden">Battery Text Section</h2>
         <div class="earbuds-title">
           <h3>Battery</h3>
           <h4>More Music, Less Charging</h4>
         </div>
-        <p class="earbuds-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        <p class="earbuds-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore
           magna aliqua. Tellus mauris a diam maecenas sed
           enim ut sem viverra. Pharetra et ultrices neque ornare. Vitae aliquet nec ullamcorper sit amet risus nullam
           eget felis. Sit amet cursus sit amet dictum sit amet justo donec. Libero id faucibus nisl tincidunt eget.
           Euismod quis viverra nibh cras.</p>
       </article>
-      <article
-        class="col-span-4 m-col-span-12 l-col-start-6 l-col-end-13 xl-col-start-6 xl-col-end-13">
+      <article class="col-span-4 m-col-span-12 l-col-start-6 l-col-end-13 xl-col-start-6 xl-col-end-13">
         <h3 class="hidden">Image of Earbuds Case</h3>
         <div class="img-cont"><img src="images/case.jpg" alt="Earbuds Case"></div>
       </article>
@@ -237,50 +240,53 @@
   </main>
   <footer class="footer-style">
     <section class="grid-con">
-        <h2 class="hidden">Footer</h2>
-        <div class="col-span-4 m-col-start-2 m-col-end-5 l-col-start-2 l-col-end-5 xl-col-start-2 xl-col-end-5">
-            <nav class="nav-list-style">
-                <h3 class="hidden">Footer text</h3>
-                <ul>
-                    <li><p class="nav-list-p">Products</p></li>
-                    <li><a class="nav-list-a" href="#">Beats Studio Pro</a></li>
-                    <li><a class="nav-list-a" href="#">Beats Flex</a></li>
-                    <li><a class="nav-list-a" href="#">Powerbeats pro</a></li>
-                    <li><a class="nav-list-a" href="#">View All</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="col-span-4 m-col-start-5 m-col-end-8 l-col-start-5 l-col-end-8 xl-col-start-5 xl-col-end-8">
-          <nav class="nav-list-style">
-              <h3 class="hidden">Footer text</h3>
-              <ul>
-                <li><p class="nav-list-p">Support</p></li>
-                <li><a class="nav-list-a" href="#">Downloads</a></li>
-                <li><a class="nav-list-a" href="#">Service & Warranty</a></li>
-                <li><a class="nav-list-a" href="#">Contact Support</a></li>
-                <li><a class="nav-list-a" href="#">Product Help</a></li>
-              </ul>
-          </nav>
+      <h2 class="hidden">Footer</h2>
+      <div class="col-span-4 m-col-start-2 m-col-end-5 l-col-start-2 l-col-end-5 xl-col-start-2 xl-col-end-5">
+        <nav class="nav-list-style">
+          <h3 class="hidden">Footer text</h3>
+          <ul>
+            <li>
+              <p class="nav-list-p">Products</p>
+            </li>
+            <li><a class="nav-list-a" href="#">Beats Studio Pro</a></li>
+            <li><a class="nav-list-a" href="#">Beats Flex</a></li>
+            <li><a class="nav-list-a" href="#">Powerbeats pro</a></li>
+            <li><a class="nav-list-a" href="#">View All</a></li>
+          </ul>
+        </nav>
       </div>
-        <div
-            class="col-span-4 m-col-start-8 m-col-end-12 l-col-start-8 l-col-end-12 xl-col-start-8 xl-col-end-12 social">
-            <div class="logo-footer ">
-                <a href="index.html">
-                    <img src="images/logo_white.svg" alt="Beats & Barbie Logo" class="logo-footer-img">
-                </a>
-            </div>
-            <nav >
-                <h2 class="hidden">Footer social media icons</h2>
-                <ul class="social-media-style">
-                    <li><a href="#" class="footer-icon"><i class="fa-brands fa-youtube fa-xl"></i></a></li>
-                    <li><a href="#" class="footer-icon"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
-                    <li><a href="#" class="footer-icon"><i class="fa-brands fa-facebook-f fa-xl"></i></a></li>
-                </ul>
-            </nav>
+      <div class="col-span-4 m-col-start-5 m-col-end-8 l-col-start-5 l-col-end-8 xl-col-start-5 xl-col-end-8">
+        <nav class="nav-list-style">
+          <h3 class="hidden">Footer text</h3>
+          <ul>
+            <li>
+              <p class="nav-list-p">Support</p>
+            </li>
+            <li><a class="nav-list-a" href="#">Downloads</a></li>
+            <li><a class="nav-list-a" href="#">Service & Warranty</a></li>
+            <li><a class="nav-list-a" href="#">Contact Support</a></li>
+            <li><a class="nav-list-a" href="#">Product Help</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-span-4 m-col-start-8 m-col-end-12 l-col-start-8 l-col-end-12 xl-col-start-8 xl-col-end-12 social">
+        <div class="logo-footer ">
+          <a href="index.html">
+            <img src="images/logo_white.svg" alt="Beats & Barbie Logo" class="logo-footer-img">
+          </a>
         </div>
+        <nav>
+          <h2 class="hidden">Footer social media icons</h2>
+          <ul class="social-media-style">
+            <li><a href="#" class="footer-icon"><i class="fa-brands fa-youtube fa-xl"></i></a></li>
+            <li><a href="#" class="footer-icon"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+            <li><a href="#" class="footer-icon"><i class="fa-brands fa-facebook-f fa-xl"></i></a></li>
+          </ul>
+        </nav>
+      </div>
     </section>
     <p class="copyright"> Beats & Barbie &copy; - 2023 All Rights Reserved.</p>
-</footer>
+  </footer>
   <!-- Loads <model-viewer> for browsers: -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
   <script src="js/main.js"></script>

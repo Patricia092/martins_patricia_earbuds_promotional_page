@@ -33,7 +33,7 @@
       text: "3x larger microphones and a voice-targeting algorithm effectively filter out background noise, resulting in crisp and clear call performance.",
       img: "images/microphones.jpg"
     },
-    
+
   ];
 
   function loadInfo() {
@@ -45,7 +45,7 @@
       text.textContent = infoBox.text;
       let img = document.createElement('img');
       img.src = infoBox.img;
-      
+
       selected.appendChild(title);
       selected.appendChild(text);
       selected.appendChild(img);
@@ -71,6 +71,88 @@
     hotspot.addEventListener("mouseover", showInfo);
     hotspot.addEventListener("mouseout", hideInfo);
   });
-  
+
+
+
+  //Animation
+
+  const canvas = document.querySelector("#earbuds-view");
+  const context = canvas.getContext("2d");
+  canvas.width = 1920;
+  canvas.height = 1080;
+  const frameCount = 250; 
+  const images = []; 
+  const buds = {
+    frame: 0
+  }
+  for (let i = 0; i < frameCount; i++) {
+    const img = document.createElement("img");
+    img.src = `./images/earbuds/earbuds${(i + 1).toString().padStart(3, '0')}.Webp`;
+    images.push(img);
+  }
+  console.table(images);
+
+  gsap.to(buds, {
+    frame: 249,
+    snap: "frame",
+    scrollTrigger: {
+      trigger: "#earbuds-view",
+      pin: true,
+      scrub: 1,
+      start: "top top",
+      markers: false
+    },
+    onUpdate: render, 
+  })
+
+  images[0].addEventListener('onLoad', render);
+
+  function render() {
+    console.log(buds.frame);
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(images[buds.frame], 0, 0);
+
+  }
+
+
+
+  // x-ray
+
+  let imageCon = document.querySelector('#imageCon'),
+    drag = document.querySelector('.image-drag'),
+    left = document.querySelector('.image-left'),
+    dragging = false,
+    min = 0,
+    max = imageCon.offsetWidth;
+
+  function onDown() {
+    dragging = true;
+    console.log(dragging);
+  }
+
+  function onUp() {
+    dragging = false;
+  }
+
+  function onMove(event) {
+    if (dragging) {
+      let x = event.clientX - imageCon.getBoundingClientRect().left;
+      console.log(x);
+
+      if (x < min) {
+        x = min;
+      } else if (x > max) {
+        x = max - 10;
+      }
+
+      drag.style.left = x + "px";
+      left.style.width = x + "px";
+    }
+  }
+
+  drag.addEventListener('mousedown', onDown);
+  document.body.addEventListener('mouseup', onUp)
+  document.body.addEventListener('mousemove', onMove);
+
 })();
 
