@@ -1,5 +1,9 @@
 @use '../abstracts' as a;
 
+#x-ray-cont {
+    display: none;
+}
+
 .img-x-ray {
     display: flex;
     justify-content: center;
@@ -34,6 +38,47 @@
         margin: 100px 0 20px 0;
     }
 
+    #mobile-tablet-view {
+        display: none;
+    }
+
+    #x-ray-cont {
+        display: block;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    #imageCon {
+        position: relative;
+        max-width: 1200px;
+        height: 100vh;
+    }
+
+    .slideImage {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100vh;
+    }
+
+    .image-right {
+        background: url(/images/x-ray.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    .image-left {
+        background: url(/images/x-ray-main.jpg) no-repeat;
+        background-size: cover;
+        width: 50%;
+    }
+
+    .image-drag {
+        background-color: a.$primary-color;
+        left: 50%;
+        width: 8px;
+        cursor: pointer;
+    }
+
 }
 
 @media screen and (min-width: 1920px) {
@@ -43,3 +88,5 @@
     }
 
 }
+
+

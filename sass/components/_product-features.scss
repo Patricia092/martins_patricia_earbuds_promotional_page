@@ -1,5 +1,9 @@
 @use '../abstracts' as a;
 
+.features-con {
+    background-color: a.$background-color;
+}
+
 .features-title h3 {
     text-align: center;
     color: a.$primary-color;
