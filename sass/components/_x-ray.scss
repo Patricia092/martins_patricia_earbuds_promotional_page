@@ -4,10 +4,6 @@
     display: none;
 }
 
-.img-x-ray {
-    display: flex;
-    justify-content: center;
-}
 
 .x-ray-title {
     font-family: a.$body-font-family;
@@ -45,7 +41,7 @@
     #x-ray-cont {
         display: block;
         max-width: 1200px;
-        margin: auto;
+       
     }
 
     #imageCon {
@@ -64,11 +60,13 @@
     .image-right {
         background: url(/images/x-ray.jpg) no-repeat;
         background-size: cover;
+        background-attachment: fixed;
     }
 
     .image-left {
         background: url(/images/x-ray-main.jpg) no-repeat;
         background-size: cover;
+        background-attachment: fixed;
         width: 50%;
     }
 
