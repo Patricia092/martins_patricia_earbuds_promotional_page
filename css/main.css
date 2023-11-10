@@ -446,7 +446,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 @media screen and (min-width: 1200px) {
   .features-title h3 {
     font-size: 42px;
-    margin-top: 90px;
+    margin-top: 100px;
   }
   .product h4 {
     font-size: 24px;
@@ -518,11 +518,6 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   display: none;
 }
 
-.img-x-ray {
-  display: flex;
-  justify-content: center;
-}
-
 .x-ray-title {
   font-family: "Karla", sans-serif;
   text-align: center;
@@ -551,7 +546,6 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   #x-ray-cont {
     display: block;
     max-width: 1200px;
-    margin: auto;
   }
   #imageCon {
     position: relative;
@@ -567,10 +561,12 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   .image-right {
     background: url(/images/x-ray.jpg) no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
   .image-left {
     background: url(/images/x-ray-main.jpg) no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     width: 50%;
   }
   .image-drag {
@@ -768,6 +764,43 @@ body {
   display: block;
 }
 
+.hero-img {
+  position: relative;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.hero-cont {
+  position: relative;
+}
+
+.btn {
+  background-color: #C69296;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.btn:hover {
+  background-color: rgb(228, 191, 195);
+  color: #7693a6;
+  transform: scale(1);
+}
+
+.btn-buy {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media screen and (max-width: 768px) {
   .logo {
     margin-top: 20px;
@@ -815,6 +848,9 @@ body {
 @media screen and (min-width: 1200px) {
   .logo {
     margin-top: 10px;
+  }
+  #earbuds-con {
+    margin-top: 100px;
   }
   .earbuds-title {
     text-align: left;

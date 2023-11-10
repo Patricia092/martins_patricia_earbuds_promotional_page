@@ -105,7 +105,7 @@
     onUpdate: render, 
   })
 
-  images[0].addEventListener('onLoad', render);
+  images[0].addEventListener('load', render);
 
   function render() {
     console.log(buds.frame);
@@ -142,7 +142,7 @@
       if (x < min) {
         x = min;
       } else if (x > max) {
-        x = max - 10;
+        x = max - 8;
       }
 
       drag.style.left = x + "px";
