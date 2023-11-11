@@ -13,7 +13,7 @@
 @media screen and (max-width: 768px) {
 
     .x-ray-title  {
-        font-size: 38px;
+        font-size: 6vw;
         margin: 50px 0 15px 0;
     }
 
@@ -31,7 +31,8 @@
 @media screen and (min-width: 1200px) {
     .x-ray-title {
         font-size: 60px;
-        margin: 100px 0 20px 0;
+        margin: 20px 0 50px 0;
+        color: a.$primary-color;
     }
 
     #mobile-tablet-view {
@@ -60,20 +61,20 @@
     .image-right {
         background: url(/images/x-ray.jpg) no-repeat;
         background-size: cover;
-        background-attachment: fixed;
+        
     }
 
     .image-left {
         background: url(/images/x-ray-main.jpg) no-repeat;
         background-size: cover;
-        background-attachment: fixed;
+        
         width: 50%;
     }
 
     .image-drag {
         background-color: a.$primary-color;
         left: 50%;
-        width: 8px;
+        width: 4px;
         cursor: pointer;
     }
 

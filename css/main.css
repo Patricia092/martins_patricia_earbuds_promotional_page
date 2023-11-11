@@ -411,19 +411,19 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 
 @media screen and (max-width: 768px) {
   .features-title h3 {
-    font-size: 30px;
-    margin: 40px 0 20px 0;
+    font-size: 5vw;
+    margin-top: 40px;
   }
   .product h4 {
-    font-size: 22px;
+    font-size: 3vw;
     padding: 0 50px 0 50px;
   }
   .product p {
-    font-size: 54px;
-    margin: 20px 0 60px 0;
+    font-size: 6vw;
+    margin: 10px 0 20px 0;
   }
   .product-title-con {
-    height: 80px;
+    height: 90px;
   }
 }
 @media screen and (min-width: 769px) {
@@ -433,10 +433,10 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   }
   .product h4 {
     font-size: 22px;
-    margin-top: 15px;
+    margin-top: 10px;
   }
   .product p {
-    font-size: 54px;
+    font-size: 5vw;
     margin-bottom: 60px;
   }
   .product-title-con {
@@ -450,7 +450,6 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   }
   .product h4 {
     font-size: 24px;
-    padding: 15px;
   }
   .product p {
     font-size: 60px;
@@ -462,7 +461,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 }
 @media screen and (min-width: 1920px) {
   .features-title h3 {
-    font-size: 42px;
+    font-size: 46px;
     margin-top: 90px;
   }
   .product h4 {
@@ -525,7 +524,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 
 @media screen and (max-width: 768px) {
   .x-ray-title {
-    font-size: 38px;
+    font-size: 6vw;
     margin: 50px 0 15px 0;
   }
 }
@@ -538,7 +537,8 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 @media screen and (min-width: 1200px) {
   .x-ray-title {
     font-size: 60px;
-    margin: 100px 0 20px 0;
+    margin: 20px 0 50px 0;
+    color: #C69296;
   }
   #mobile-tablet-view {
     display: none;
@@ -561,18 +561,16 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   .image-right {
     background: url(/images/x-ray.jpg) no-repeat;
     background-size: cover;
-    background-attachment: fixed;
   }
   .image-left {
     background: url(/images/x-ray-main.jpg) no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     width: 50%;
   }
   .image-drag {
     background-color: #C69296;
     left: 50%;
-    width: 8px;
+    width: 4px;
     cursor: pointer;
   }
 }
@@ -749,6 +747,11 @@ body {
 .earbuds-title h3 {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+  color: #7693a6;
+}
+
+.earbuds-title h4 {
+  color: #C69296;
 }
 
 .img-cont {
@@ -810,17 +813,20 @@ body {
     padding-left: 20px;
   }
   .earbuds-title h3 {
-    font-size: 16px;
-    margin-top: 30px;
+    font-size: 18px;
+    margin-top: 50px;
   }
   .earbuds-title h4 {
     font-size: 40px;
     margin: 10px 0 15px 0;
   }
   .earbuds-text {
-    font-size: 16px;
+    font-size: 18px;
     padding: 0 20px 0 20px;
     line-height: 1.4;
+  }
+  .img-cont {
+    margin: 40px 0 40px 0;
   }
 }
 @media screen and (min-width: 769px) {
@@ -833,7 +839,7 @@ body {
   }
   .earbuds-title h3 {
     font-size: 18px;
-    margin-top: 30px;
+    margin-top: 60px;
   }
   .earbuds-title h4 {
     font-size: 46px;
@@ -844,13 +850,17 @@ body {
     padding: 0 20px 0 20px;
     line-height: 1.6;
   }
+  .img-cont {
+    margin: 40px 0 40px 0;
+  }
 }
 @media screen and (min-width: 1200px) {
   .logo {
     margin-top: 10px;
   }
   #earbuds-con {
-    margin-top: 100px;
+    margin-top: 70px;
+    margin-bottom: 50px;
   }
   .earbuds-title {
     text-align: left;

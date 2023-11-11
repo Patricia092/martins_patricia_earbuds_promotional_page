@@ -26,21 +26,21 @@
 
 @media screen and (max-width: 768px) {
     .features-title h3 {
-        font-size: 30px;
-        margin: 40px 0 20px 0;
+        font-size: 5vw;
+        margin-top: 40px;
     }
 
     .product h4 {
-        font-size: 22px;
+        font-size: 3vw;
         padding: 0 50px 0 50px;
     }
 
     .product p {
-        font-size: 54px;
-        margin: 20px 0 60px 0;
+        font-size: 6vw;
+        margin: 10px 0 20px 0;
     }
     .product-title-con {
-        height: 80px;
+        height: 90px;
     }
 }
 
@@ -52,11 +52,11 @@
 
     .product h4 {
         font-size: 22px; 
-        margin-top: 15px;
+        margin-top: 10px;
     }
 
     .product p {
-        font-size: 54px;
+        font-size: 5vw;
         margin-bottom: 60px;
     }
 
@@ -75,7 +75,7 @@
 
     .product h4 {
         font-size: 24px;
-        padding: 15px;
+     
     }
 
     .product p {
@@ -90,7 +90,7 @@
 
 @media screen and (min-width: 1920px) {
     .features-title h3 {
-        font-size: 42px;
+        font-size: 46px;
         margin-top: 90px;
     }
 
