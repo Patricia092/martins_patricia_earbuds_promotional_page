@@ -90,7 +90,6 @@
     img.src = `./images/earbuds/earbuds${(i + 1).toString().padStart(3, '0')}.Webp`;
     images.push(img);
   }
-  console.table(images);
 
   gsap.to(buds, {
     frame: 249,
@@ -108,7 +107,6 @@
   images[0].addEventListener('load', render);
 
   function render() {
-    console.log(buds.frame);
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.drawImage(images[buds.frame], 0, 0);
 
@@ -127,7 +125,6 @@
 
   function onDown() {
     dragging = true;
-    console.log(dragging);
   }
 
   function onUp() {
@@ -137,12 +134,11 @@
   function onMove(event) {
     if (dragging) {
       let x = event.clientX - imageCon.getBoundingClientRect().left;
-      console.log(x);
 
       if (x < min) {
         x = min;
       } else if (x > max) {
-        x = max - 8;
+        x = max - 4;
       }
 
       drag.style.left = x + "px";
