@@ -6,13 +6,27 @@ model-viewer {
   margin: 0 auto;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .Hotspot {
   background: url(/images/hotspot.svg) center no-repeat;
   border: 0;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   transition: all 1s ease-in-out;
-  display: none;
+  opacity: 1;
+  animation: pulse 2s infinite;
+  transform-origin: center;
+  cursor: pointer;
 }
 
 .Hotspot:not([data-visible]) {
@@ -80,7 +94,7 @@ model-viewer {
 }
 
 model-viewer::part(default-progress-bar) {
-  height: 30px;
+  height: 6px;
   background-color: #C69296;
 }
 
@@ -520,25 +534,25 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 .x-ray-title {
   font-family: "Karla", sans-serif;
   text-align: center;
+  color: #C69296;
 }
 
 @media screen and (max-width: 768px) {
   .x-ray-title {
     font-size: 6vw;
-    margin: 50px 0 15px 0;
+    margin: 10px 0 20px 0;
   }
 }
 @media screen and (min-width: 769px) {
   .x-ray-title {
-    font-size: 46px;
-    margin: 60px 0 15px 0;
+    font-size: 48px;
+    margin: 60px 0 20px 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .x-ray-title {
     font-size: 60px;
-    margin: 20px 0 50px 0;
-    color: #C69296;
+    margin: 50px 0 40px 0;
   }
   #mobile-tablet-view {
     display: none;
@@ -858,9 +872,8 @@ body {
   .logo {
     margin-top: 10px;
   }
-  #earbuds-con {
-    margin-top: 70px;
-    margin-bottom: 50px;
+  .earbuds-style {
+    margin: 60px 0 50px 0;
   }
   .earbuds-title {
     text-align: left;
@@ -883,6 +896,9 @@ body {
 @media screen and (min-width: 1920px) {
   .logo {
     margin-top: 12px;
+  }
+  .earbuds-style {
+    margin: 50px 0 50px 0;
   }
   .earbuds-title {
     text-align: left;

@@ -98,11 +98,10 @@
       trigger: "#earbuds-view",
       pin: true,
       scrub: 1,
-      start: "top top",
-      markers: false
+      start: "top top"
     },
     onUpdate: render, 
-  })
+  });
 
   images[0].addEventListener('load', render);
 
@@ -149,6 +148,42 @@
   drag.addEventListener('mousedown', onDown);
   document.body.addEventListener('mouseup', onUp)
   document.body.addEventListener('mousemove', onMove);
+
+
+
+
+  //scrolltrigger Sound Quality Section
+  gsap.from(".earbuds-content", {
+    scrollTrigger: {
+      trigger: "#earbuds-con",
+      start: "top center",
+    },
+    stagger: {amount: 0.5},
+    scale: 0.8,
+    duration: 1
+  });
+  
+ //scrolltrigger Sound Quality Section
+ gsap.from(".comfort-con", {
+  scrollTrigger: {
+    trigger: ".comfort-content",
+    start: "top center",
+  },
+  stagger: {amount: 0.5},
+  scale: 0.8,
+  duration: 1
+});
+
+ //scrolltrigger Battery Section
+ gsap.from(".battery-con", {
+  scrollTrigger: {
+    trigger: ".battery-content",
+    start: "top center",
+  },
+  stagger: {amount: 0.5},
+  scale: 0.8,
+  duration: 1
+});
 
 })();
 
