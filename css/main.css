@@ -298,7 +298,7 @@ a {
   height: 3px;
   width: 33px;
   border-radius: 2px;
-  background-color: #888888;
+  background-color: #7693a6;
   position: relative;
   display: block;
   transition: all 0.2s ease-in-out;
@@ -318,7 +318,7 @@ a {
   height: 3px;
   width: 33px;
   border-radius: 2px;
-  background-color: #888888;
+  background-color: #7693a6;
   position: absolute;
   content: "";
   transition: all 0.2s ease-in-out;
@@ -327,7 +327,7 @@ a {
 #overlay-button:hover span,
 #overlay-button:hover span:before,
 #overlay-button:hover span:after {
-  background: #888888;
+  background: #7693a6;
 }
 
 input[type=checkbox] {
@@ -390,7 +390,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 }
 
 #overlay ul li a:hover {
-  color: #999999;
+  color: #7693a6;
 }
 
 /* End of Menu */
@@ -600,12 +600,31 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 }
 
 .copyright {
-  padding-top: 30px;
-  padding-bottom: 30px;
   color: #ffffff;
-  display: flex;
-  justify-content: center;
   font-weight: lighter;
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
+
+.btn-back {
+  border-radius: 50%;
+  border: 1px solid white;
+  color: white;
+  background-color: #C69296;
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-back-top {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 19px;
+}
+
+.mobile-back {
+  display: block;
 }
 
 .logo-footer {
@@ -647,7 +666,6 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 3% 0 0 4%;
 }
 
 .social-media-style li a {
@@ -688,7 +706,13 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
     text-align: center;
     margin-top: 20%;
   }
+  .social-media-style {
+    margin-top: 3%;
+  }
   .nav-list-style {
+    display: none;
+  }
+  .mobile-back {
     display: none;
   }
 }
@@ -707,6 +731,16 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   .nav-list-p {
     font-size: 28px;
     margin-bottom: 10px;
+  }
+  .social-media-style {
+    margin: 3% 0 0 4%;
+  }
+  .btn-back-top {
+    padding-top: 22px;
+  }
+  .btn-back {
+    padding: 8px 14px;
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -731,11 +765,17 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
     font-size: 30px;
     margin-bottom: 10px;
   }
+  .social-media-style {
+    margin: 3% 0 0 4%;
+  }
 }
 @media screen and (min-width: 1920px) {
   .social {
     margin-bottom: 20%;
     text-align: center;
+  }
+  .social-media-style {
+    margin: 3% 0 0 4%;
   }
 }
 body {
@@ -806,7 +846,7 @@ body {
 }
 
 .btn:hover {
-  background-color: rgb(228, 191, 195);
+  background-color: #e1abb0;
   color: #7693a6;
   transform: scale(1);
 }
@@ -821,6 +861,10 @@ body {
 @media screen and (max-width: 768px) {
   .logo {
     margin-top: 20px;
+  }
+  .btn {
+    font-size: 3vw;
+    padding: 10px 30px;
   }
   .earbuds-title {
     text-align: left;
@@ -846,6 +890,10 @@ body {
 @media screen and (min-width: 769px) {
   .logo {
     margin-top: 10px;
+  }
+  .btn {
+    font-size: 18px;
+    padding: 10px 32px;
   }
   .earbuds-title {
     text-align: left;

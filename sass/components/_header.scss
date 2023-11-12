@@ -174,7 +174,7 @@ a {
     height: 3px;
     width: 33px;
     border-radius: 2px;
-    background-color: #888888;
+    background-color: #7693a6;
     position: relative;
     display: block;
     transition: all 0.2s ease-in-out;
@@ -194,7 +194,7 @@ a {
     height: 3px;
     width: 33px;
     border-radius: 2px;
-    background-color: #888888;
+    background-color: #7693a6;
     position: absolute;
     content: "";
     transition: all 0.2s ease-in-out;
@@ -203,7 +203,7 @@ a {
 #overlay-button:hover span,
 #overlay-button:hover span:before,
 #overlay-button:hover span:after {
-    background: #888888;
+    background: #7693a6;
 }
 
 
@@ -267,7 +267,7 @@ input[type=checkbox]:checked~#overlay-button span:after {
 }
 
 #overlay ul li a:hover {
-    color: #999999;
+    color: #7693a6;
 }
 
 /* End of Menu */
