@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Beats & Barbie</title>
+  <title>Barbie & Beats</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,9 +18,8 @@
 <body>
   <h1 class="hidden">Barbie and Beats</h1>
   <header>
-    <div class="grid-con">
+    <div class="grid-con" id="header-con">
       <h2 class="hidden">Header</h2>
-
       <div
         class="col-start-1 col-end-3 m-col-start-1 m-col-end-3 l-col-start-1 l-col-end-3 xl-col-start-1 xl-col-end-3 logo">
         <a href="#">
@@ -58,18 +57,17 @@
       <div class="col-span-full">
         <canvas id="earbuds-view"></canvas>
       </div>
-
     </section>
     <section class="grid-con hero-cont">
+      <h2 class="hidden">Hero Section</h2>
       <article class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">
         <h3 class="hidden">Image of Earbuds Case</h3>
         <div class="hero-img"><img src="images/barbie_and_beats.jpg" alt="Barbie & Beats"></div>
       </article>
       <div class="btn-buy">
-        <button class="btn">Add to Cart</button>
+        <button class="btn">Buy Now</button>
       </div>
     </section>
-
     <section class="features-con">
       <div class="grid-con">
         <h2 class="hidden">Features section</h2>
@@ -92,7 +90,6 @@
           </div>
           <p><i class="fa-solid fa-headphones"></i></p>
         </article>
-
         <article
           class="col-span-2 m-col-start-7 m-col-end-10 l-col-start-7 l-col-end-10 xl-col-start-7 xl-col-end-10 product ">
           <h3 class="hidden">Feature Title 3</h3>
@@ -110,9 +107,7 @@
           <p><i class="fa-solid fa-music"></i></p>
         </article>
       </div>
-
     </section>
-
     <section class="earbuds-style" id="earbuds-con">
       <div class="grid-con">
         <h2 class="hidden">Sound Quality Section</h2>
@@ -122,29 +117,29 @@
             <h3>Sound Quality</h3>
             <h4>Powerful, Balanced Sound</h4>
           </div>
-          <p class="earbuds-text">Experience the symphony of power and balance in every beat, whether you’re listening to
+          <p class="earbuds-text">Experience the symphony of power and balance in every beat, whether you’re listening
+            to
             music or taking calls. Our cutting-edge technology delivers a harmonious blend of powerful, crisp sound, and
-            finely tuned balance. Immerse yourself in a world where every note is clear, every beat is dynamic, and every
+            finely tuned balance. Immerse yourself in a world where every note is clear, every beat is dynamic, and
+            every
             sound is perfectly balanced.</p>
         </article>
-        <article class="col-span-4 m-col-span-12 l-col-start-7 l-col-end-13 xl-col-start-7 xl-col-end-13 earbuds-content">
+        <article
+          class="col-span-4 m-col-span-12 l-col-start-7 l-col-end-13 xl-col-start-7 xl-col-end-13 earbuds-content">
           <h3 class="hidden">Image More Sound</h3>
           <div class="img-cont"><img src="images/sound.jpg" alt="More Sound"></div>
         </article>
       </div>
-      
     </section>
-
     <section class="grid-con">
       <h2 class="hidden">AR Section</h2>
       <article class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">
         <h3 class="x-ray-title">View All Details</h3>
       </article>
     </section>
-
     <section class="full-width-grid-con" id="model-con">
       <h2 class="hidden">AR Model Section</h2>
-      <article class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 ">
+      <article class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">
         <h3 class="hidden">AR Model</h3>
         <!-- <model-viewer> HTML element -->
         <model-viewer id="model" src="model/earbuds_mv.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls
@@ -186,7 +181,6 @@
         </model-viewer>
       </article>
     </section>
-
     <section class="earbuds-style comfort-content">
       <div class="grid-con">
         <h2 class="hidden">All-Day
@@ -199,7 +193,8 @@
             <h4>All-Day
               Comfort</h4>
           </div>
-          <p class="earbuds-text">Tailored for comfort, the Barbie & Beats Studio Buds + come with four ear tip sizes (XS,
+          <p class="earbuds-text">Tailored for comfort, the Barbie & Beats Studio Buds + come with four ear tip sizes
+            (XS,
             S, M, and L). This wide selection lets you find the perfect fit for ultimate comfort and exceptional sound
             quality. You can be sure your earbuds will stay in place, ensuring a seamless experience while you listen to
             your favorite tunes or take important calls.
@@ -211,7 +206,6 @@
         </article>
       </div>
     </section>
-
     <section class="grid-con">
       <h2 class="hidden">X-Ray revealer</h2>
       <article class="col-span-full">
@@ -228,7 +222,6 @@
         </div>
       </article>
     </section>
-
     <section class="earbuds-style battery-content">
       <div class="grid-con">
         <h2 class="hidden">Battery Section</h2>
@@ -238,8 +231,10 @@
             <h3>Battery</h3>
             <h4>More Music, Less Charging</h4>
           </div>
-          <p class="earbuds-text">Benefit from up to 42 hours of continuous listening time with the stylish, pocket-sized
-            charging case, making the Barbie & Beats Studio Buds + your ready-to-go companions. Plus, for those low battery
+          <p class="earbuds-text">Benefit from up to 42 hours of continuous listening time with the stylish,
+            pocket-sized
+            charging case, making the Barbie & Beats Studio Buds + your ready-to-go companions. Plus, for those low
+            battery
             moments, Fast Fuel provides up to 1 hour of playback with just a 5-minute charge.</p>
         </article>
         <article class="col-span-4 m-col-span-12 l-col-start-7 l-col-end-13 xl-col-start-7 xl-col-end-13 battery-con">
@@ -247,7 +242,6 @@
           <div class="img-cont"><img src="images/case.jpg" alt="Earbuds Case"></div>
         </article>
       </div>
-     
     </section>
   </main>
   <footer class="footer-style">
@@ -296,12 +290,16 @@
           </ul>
         </nav>
       </div>
+      <div class="col-span-4 m-col-start-1 m-col-end-12 l-col-start-1 l-col-end-12 xl-col-start-1 xl-col-end-12">
+        <p class="copyright"> Barbie & Beats &copy; - 2023 All Rights Reserved.</p>
+      </div>
+      <div class="btn-back-top mobile-back" id="back">
+        <a class="btn-back" href="#"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
     </section>
-    <p class="copyright"> Barbie & Beats &copy; - 2023 All Rights Reserved.</p>
   </footer>
-   <!-- ScrollTrigger plugin -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <!-- Loads <model-viewer> for browsers: -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
   <script src="js/main.js"></script>
 </body>

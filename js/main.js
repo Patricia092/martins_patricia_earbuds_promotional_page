@@ -1,10 +1,12 @@
 (() => {
-  //Variables
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollToPlugin);
+
+  //AR Model
 
   const model = document.querySelector("#model");
   const hotSpots = document.querySelectorAll(".Hotspot");
-
-  //Functions
 
   function mLoaded() {
     hotSpots.forEach(hotspot => {
@@ -64,7 +66,6 @@
     gsap.to(selected, 1, { autoAlpha: 0 });
   }
 
-  //Event Listeners
   model.addEventListener("load", mLoaded);
 
   hotSpots.forEach(function (hotspot) {
@@ -73,15 +74,14 @@
   });
 
 
-
-  //Animation
+  // Vertical Scrolling Animation 
 
   const canvas = document.querySelector("#earbuds-view");
   const context = canvas.getContext("2d");
   canvas.width = 1920;
   canvas.height = 1080;
-  const frameCount = 250; 
-  const images = []; 
+  const frameCount = 250;
+  const images = [];
   const buds = {
     frame: 0
   }
@@ -100,7 +100,7 @@
       scrub: 1,
       start: "top top"
     },
-    onUpdate: render, 
+    onUpdate: render,
   });
 
   images[0].addEventListener('load', render);
@@ -112,8 +112,7 @@
   }
 
 
-
-  // x-ray
+  // X-ray
 
   let imageCon = document.querySelector('#imageCon'),
     drag = document.querySelector('.image-drag'),
@@ -150,6 +149,15 @@
   document.body.addEventListener('mousemove', onMove);
 
 
+  //scroll To Animation
+  const BackToHeader = document.querySelector(".btn-back");
+
+  function scrollToTop(e) {
+    e.preventDefault();
+    gsap.to(window, { duration: 1, scrollTo: { y: 0, offsetY: 100 } });
+  }
+
+  BackToHeader.addEventListener("click", scrollToTop);
 
 
   //scrolltrigger Sound Quality Section
@@ -158,32 +166,32 @@
       trigger: "#earbuds-con",
       start: "top center",
     },
-    stagger: {amount: 0.5},
+    stagger: { amount: 0.5 },
     scale: 0.8,
     duration: 1
   });
-  
- //scrolltrigger Sound Quality Section
- gsap.from(".comfort-con", {
-  scrollTrigger: {
-    trigger: ".comfort-content",
-    start: "top center",
-  },
-  stagger: {amount: 0.5},
-  scale: 0.8,
-  duration: 1
-});
 
- //scrolltrigger Battery Section
- gsap.from(".battery-con", {
-  scrollTrigger: {
-    trigger: ".battery-content",
-    start: "top center",
-  },
-  stagger: {amount: 0.5},
-  scale: 0.8,
-  duration: 1
-});
+  //scrolltrigger Comfort Section Section
+  gsap.from(".comfort-con", {
+    scrollTrigger: {
+      trigger: ".comfort-content",
+      start: "top center",
+    },
+    stagger: { amount: 0.5 },
+    scale: 0.8,
+    duration: 1
+  });
+
+  //scrolltrigger Battery Section
+  gsap.from(".battery-con", {
+    scrollTrigger: {
+      trigger: ".battery-content",
+      start: "top center",
+    },
+    stagger: { amount: 0.5 },
+    scale: 0.8,
+    duration: 1
+  });
 
 })();
 

@@ -7,7 +7,6 @@ body {
     color: a.$body-color;
 }
 
-// general
 .box-starting {
     background-color: rgb(221, 221, 221);
     color: rgb(27, 27, 27);
@@ -56,7 +55,7 @@ body {
 }
 
 .btn {
-    background-color: #C69296;
+    background-color: a.$primary-color;
     border: none;
     border-radius: 20px;
     font-size: 20px;
@@ -70,7 +69,7 @@ body {
 }
 
 .btn:hover {
-    background-color: rgb(228, 191, 195);
+    background-color: #e1abb0;
     color: #7693a6;
     transform: scale(1);
 }
@@ -87,6 +86,11 @@ body {
 
     .logo {
         margin-top: 20px;
+    }
+
+    .btn {
+        font-size: 3vw;
+        padding: 10px 30px;
     }
 
     .earbuds-title {
@@ -119,6 +123,11 @@ body {
 
     .logo {
         margin-top: 10px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 10px 32px;
     }
 
     .earbuds-title {
