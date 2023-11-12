@@ -8,13 +8,28 @@ model-viewer {
   margin: 0 auto;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .Hotspot {
   background: url(/images/hotspot.svg) center no-repeat;
   border: 0;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   transition: all 1s ease-in-out;
-  display: none;
+  opacity: 1;
+  animation: pulse 2s infinite;
+  transform-origin: center;
+  cursor: pointer;
 }
 
 .Hotspot:not([data-visible]) {
@@ -83,7 +98,7 @@ model-viewer {
 }
 
 model-viewer::part(default-progress-bar) {
-  height: 30px;
+  height: 6px;
   background-color: #C69296;
 }
 
